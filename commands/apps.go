@@ -37,7 +37,7 @@ import (
 	multierror "github.com/hashicorp/go-multierror"
 	"github.com/spf13/cobra"
 	"golang.org/x/sync/errgroup"
-	"sigs.k8s.io/yaml"
+	"gopkg.in/yaml.v3"
 )
 
 // Apps creates the apps command.
@@ -1226,6 +1226,7 @@ func RunAppsTierInstanceSizeGet(c *CmdConfig) error {
 	}
 
 	return c.Display(displayers.AppInstanceSizes([]*godo.AppInstanceSize{instanceSize}))
+}	return c.Display(displayers.AppInstanceSizes([]*godo.AppInstanceSize{instanceSize}))
 }
 
 // RunAppListAlerts gets configured alerts on an app
