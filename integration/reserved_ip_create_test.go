@@ -60,7 +60,6 @@ var _ = suite("compute/reserved-ip/create", func(t *testing.T, when spec.G, it s
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("the droplet-id flag is provided", func() {

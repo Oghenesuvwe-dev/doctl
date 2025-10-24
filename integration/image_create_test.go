@@ -76,7 +76,7 @@ var _ = suite("compute/image/create", func(t *testing.T, when spec.G, it spec.S)
 
 		baseErr := `Error: (image.create%s) command is missing required arguments`
 
-		var cases = []struct {
+		cases := []struct {
 			desc string
 			err  string
 			args []string

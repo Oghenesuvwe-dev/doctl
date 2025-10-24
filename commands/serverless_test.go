@@ -116,7 +116,6 @@ func TestServerlessConnect(t *testing.T) {
 				if tt.expectedOutput != "" {
 					assert.Equal(t, tt.expectedOutput, buf.String())
 				}
-
 			})
 		})
 	}
@@ -231,7 +230,6 @@ func TestServerlessStatusWithLanguages(t *testing.T) {
 
 func TestServerlessStatusWhenNotConnected(t *testing.T) {
 	withTestClient(t, func(config *CmdConfig, tm *tcMocks) {
-
 		tm.serverless.EXPECT().CheckServerlessStatus().MinTimes(1).Return(nil)
 		tm.serverless.EXPECT().ReadCredentials().Return(do.ServerlessCredentials{
 			APIHost:   "https://api.example.com",
@@ -426,7 +424,7 @@ func TestServerlessInit(t *testing.T) {
 					tm.serverless.EXPECT().ReadCredentials().Return(creds, nil)
 					hostInfo := do.ServerlessHostInfo{
 						Runtimes: map[string][]do.ServerlessRuntime{
-							"go": []do.ServerlessRuntime{},
+							"go": {},
 						},
 					}
 					tm.serverless.EXPECT().GetHostInfo("https://example.com").Return(hostInfo, nil)

@@ -53,7 +53,6 @@ var _ = suite("vpcs/list", func(t *testing.T, when spec.G, it spec.S) {
 			"-u", server.URL,
 			"vpcs",
 		)
-
 	})
 
 	when("command is list", func() {

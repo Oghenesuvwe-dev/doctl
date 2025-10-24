@@ -161,7 +161,6 @@ func (ji JobInvocations) KV() []map[string]any {
 	out := make([]map[string]any, len(ji))
 
 	for i, invocation := range ji {
-
 		out[i] = map[string]any{
 			"ID":        invocation.ID,
 			"Jobname":   invocation.JobName,

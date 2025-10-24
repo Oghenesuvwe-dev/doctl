@@ -9,14 +9,12 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var (
-	testOpenAIKey = do.OpenAiApiKey{
-		OpenAiApiKey: &godo.OpenAiApiKey{
-			Uuid: "d35e5cb7-7957-4643-8e3a-1ab4eb3a494c",
-			Name: "Test OpenAI Key",
-		},
-	}
-)
+var testOpenAIKey = do.OpenAiApiKey{
+	OpenAiApiKey: &godo.OpenAiApiKey{
+		Uuid: "d35e5cb7-7957-4643-8e3a-1ab4eb3a494c",
+		Name: "Test OpenAI Key",
+	},
+}
 
 func TestOpenAIKeyCommand(t *testing.T) {
 	cmd := OpenAIKeyCmd()
@@ -44,7 +42,6 @@ func TestOpenAIKeyList(t *testing.T) {
 
 func TestOpenAIKeyCreate(t *testing.T) {
 	withTestClient(t, func(config *CmdConfig, tm *tcMocks) {
-
 		config.Doit.Set(config.NS, doctl.ArgOpenAIKeyName, "Test OpenAI Key")
 		config.Doit.Set(config.NS, doctl.ArgOpenAIKeyAPIKey, "sk-proddfsefac")
 

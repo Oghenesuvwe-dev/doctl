@@ -132,7 +132,6 @@ func RunDomainCreate(c *CmdConfig) error {
 
 // RunDomainList runs domain create.
 func RunDomainList(c *CmdConfig) error {
-
 	ds := c.Domains()
 
 	domains, err := ds.List()
@@ -293,7 +292,6 @@ func RunRecordCreate(c *CmdConfig) error {
 	}
 
 	return displayDomainRecords(c, *r)
-
 }
 
 // RunRecordDelete deletes a domain record.
@@ -331,7 +329,6 @@ func RunRecordDelete(c *CmdConfig) error {
 	}
 
 	return nil
-
 }
 
 // RunRecordUpdate updates a domain record.
@@ -418,7 +415,7 @@ func displayDomainRecords(c *CmdConfig, records ...do.DomainRecord) error {
 	// Check the format flag to determine if the displayer should use the short
 	// layout of the record display.The short version is used by default, but to format
 	// output that includes columns not in the short layout we need the full version.
-	var short = true
+	short := true
 	format, err := c.Doit.GetStringSlice(c.NS, doctl.ArgFormat)
 	if err != nil {
 		return err

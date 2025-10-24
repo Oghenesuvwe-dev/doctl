@@ -64,8 +64,9 @@ var _ = suite("invoices/pdf", func(t *testing.T, when spec.G, it spec.S) {
 
 		os.Remove(fpath)
 	})
-
 })
 
-const invoicePDFOutput string = ""
-const invoicePDFResponse string = "pdf response"
+const (
+	invoicePDFOutput   string = ""
+	invoicePDFResponse string = "pdf response"
+)

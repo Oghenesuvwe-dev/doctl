@@ -17,7 +17,8 @@ var (
 			RegionSlug:  "nyc1",
 			Description: "vpc description",
 			IPRange:     "10.116.0.0/20",
-		}}
+		},
+	}
 
 	testVPCList = do.VPCs{
 		testVPC,
@@ -90,7 +91,6 @@ func TestVPCUpdate(t *testing.T) {
 			setup: func(in *CmdConfig) {
 				in.Args = append(in.Args, "vpc-uuid")
 				in.Doit.Set(in.NS, doctl.ArgVPCName, "update-vpc-name-test")
-
 			},
 			expectedVPCId: "vpc-uuid",
 			expectedRequest: []godo.VPCSetField{
@@ -104,7 +104,6 @@ func TestVPCUpdate(t *testing.T) {
 				in.Args = append(in.Args, "vpc-uuid")
 				in.Doit.Set(in.NS, doctl.ArgVPCName, "update-vpc-name-test")
 				in.Doit.Set(in.NS, doctl.ArgVPCDescription, "i am a new desc")
-
 			},
 			expectedVPCId: "vpc-uuid",
 			expectedRequest: []godo.VPCSetField{

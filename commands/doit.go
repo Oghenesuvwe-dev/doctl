@@ -37,7 +37,7 @@ const (
 )
 
 var (
-	//DoitCmd is the root level doctl command that all other commands attach to
+	// DoitCmd is the root level doctl command that all other commands attach to
 	DoitCmd = &Command{ // base command
 		Command: &cobra.Command{
 			Use:   "doctl",
@@ -45,21 +45,21 @@ var (
 		},
 	}
 
-	//Writer wires up stdout for all commands to write to
+	// Writer wires up stdout for all commands to write to
 	Writer = os.Stdout
-	//APIURL customize API base URL
+	// APIURL customize API base URL
 	APIURL string
-	//Context current auth context
+	// Context current auth context
 	Context string
-	//Output global output format
+	// Output global output format
 	Output string
-	//Token global authorization token
+	// Token global authorization token
 	Token string
-	//Trace toggles http tracing output
+	// Trace toggles http tracing output
 	Trace bool
-	//Verbose toggle verbose output on and off
+	// Verbose toggle verbose output on and off
 	Verbose bool
-	//Interactive toggle interactive behavior
+	// Interactive toggle interactive behavior
 	Interactive bool
 
 	// Retry settings to pass through to godo.RetryConfig
@@ -167,7 +167,6 @@ func Execute() {
 
 // AddCommands adds sub commands to the base command.
 func addCommands() {
-
 	DoitCmd.AddGroup(&cobra.Group{ID: manageResourcesGroup, Title: "Manage DigitalOcean Resources:"})
 	DoitCmd.AddGroup(&cobra.Group{ID: configureDoctlGroup, Title: "Configure doctl:"})
 	DoitCmd.AddGroup(&cobra.Group{ID: viewBillingGroup, Title: "View Billing:"})

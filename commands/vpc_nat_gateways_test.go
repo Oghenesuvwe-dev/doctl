@@ -8,60 +8,58 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-var (
-	testVPCNATGateways = []*godo.VPCNATGateway{
-		{
-			ID:     "51154959-e07b-4093-98fb-828590ecc76d",
-			Name:   "test-vpc-nat-gateway-01",
-			Type:   "PUBLIC",
-			State:  "ACTIVE",
-			Region: "nyc3",
-			Size:   1,
-			VPCs: []*godo.IngressVPC{
-				{
-					VpcUUID:   "05790d02-c7e0-47d6-a917-5b4cf68cf5b7",
-					GatewayIP: "10.110.0.22",
-				},
+var testVPCNATGateways = []*godo.VPCNATGateway{
+	{
+		ID:     "51154959-e07b-4093-98fb-828590ecc76d",
+		Name:   "test-vpc-nat-gateway-01",
+		Type:   "PUBLIC",
+		State:  "ACTIVE",
+		Region: "nyc3",
+		Size:   1,
+		VPCs: []*godo.IngressVPC{
+			{
+				VpcUUID:   "05790d02-c7e0-47d6-a917-5b4cf68cf5b7",
+				GatewayIP: "10.110.0.22",
 			},
-			Egresses: &godo.Egresses{
-				PublicGateways: []*godo.PublicGateway{
-					{
-						IPv4: "77.38.26.185",
-					},
-				},
-			},
-			UDPTimeoutSeconds:  30,
-			ICMPTimeoutSeconds: 30,
-			TCPTimeoutSeconds:  30,
-			ProjectID:          "0b0f3f3c-1d2e-4e5f-8f3c-0b0f3f3c1d2e",
 		},
-		{
-			ID:     "4d99fb28-b33d-4791-aff5-bf30f8f4f917",
-			Name:   "test-vpc-nat-gateway-02",
-			Type:   "PUBLIC",
-			State:  "ACTIVE",
-			Region: "nyc3",
-			Size:   1,
-			VPCs: []*godo.IngressVPC{
+		Egresses: &godo.Egresses{
+			PublicGateways: []*godo.PublicGateway{
 				{
-					VpcUUID:   "05790d02-c7e0-47d6-a917-5b4cf68cf5b7",
-					GatewayIP: "10.110.0.23",
+					IPv4: "77.38.26.185",
 				},
 			},
-			Egresses: &godo.Egresses{
-				PublicGateways: []*godo.PublicGateway{
-					{
-						IPv4: "151.123.18.248",
-					},
-				},
-			},
-			UDPTimeoutSeconds:  30,
-			ICMPTimeoutSeconds: 30,
-			TCPTimeoutSeconds:  30,
-			ProjectID:          "0b0f3f3c-1d2e-4e5f-8f3c-0b0f3f3c1d2e",
 		},
-	}
-)
+		UDPTimeoutSeconds:  30,
+		ICMPTimeoutSeconds: 30,
+		TCPTimeoutSeconds:  30,
+		ProjectID:          "0b0f3f3c-1d2e-4e5f-8f3c-0b0f3f3c1d2e",
+	},
+	{
+		ID:     "4d99fb28-b33d-4791-aff5-bf30f8f4f917",
+		Name:   "test-vpc-nat-gateway-02",
+		Type:   "PUBLIC",
+		State:  "ACTIVE",
+		Region: "nyc3",
+		Size:   1,
+		VPCs: []*godo.IngressVPC{
+			{
+				VpcUUID:   "05790d02-c7e0-47d6-a917-5b4cf68cf5b7",
+				GatewayIP: "10.110.0.23",
+			},
+		},
+		Egresses: &godo.Egresses{
+			PublicGateways: []*godo.PublicGateway{
+				{
+					IPv4: "151.123.18.248",
+				},
+			},
+		},
+		UDPTimeoutSeconds:  30,
+		ICMPTimeoutSeconds: 30,
+		TCPTimeoutSeconds:  30,
+		ProjectID:          "0b0f3f3c-1d2e-4e5f-8f3c-0b0f3f3c1d2e",
+	},
+}
 
 func TestVPCNATGatewayCommand(t *testing.T) {
 	cmd := VPCNATGateway()

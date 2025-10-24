@@ -110,7 +110,6 @@ var _ = suite("database/create", func(t *testing.T, when spec.G, it spec.S) {
 			output, err := cmd.CombinedOutput()
 			expect.NoError(err, fmt.Sprintf("received error output: %s", output))
 			expect.Equal(strings.TrimSpace(databasesCreateOutput), strings.TrimSpace(string(output)))
-
 		})
 	})
 
@@ -135,10 +134,8 @@ var _ = suite("database/create", func(t *testing.T, when spec.G, it spec.S) {
 			output, err := cmd.CombinedOutput()
 			expect.NoError(err, fmt.Sprintf("received error output: %s", output))
 			expect.Equal(strings.TrimSpace(databasesWaitCreateOutput), strings.TrimSpace(string(output)))
-
 		})
 	})
-
 })
 
 const (

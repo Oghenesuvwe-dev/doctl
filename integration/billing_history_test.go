@@ -51,7 +51,6 @@ var _ = suite("billingHistory", func(t *testing.T, when spec.G, it spec.S) {
 		expect.NoError(err, fmt.Sprintf("received error output: %s", output))
 		expect.Equal(strings.TrimSpace(billingHistoryListOutput), strings.TrimSpace(string(output)))
 	})
-
 })
 
 const billingHistoryListOutput string = `
@@ -59,6 +58,7 @@ Date                    Type       Description             Amount    Invoice ID 
 2018-06-01T08:44:38Z    Invoice    Invoice for May 2018    12.34     123           example-uuid
 2018-06-02T08:44:38Z    Payment    Payment (MC 2018)       -12.34
 `
+
 const billingHistoryListResponse string = `
 {
 	"billing_history": [

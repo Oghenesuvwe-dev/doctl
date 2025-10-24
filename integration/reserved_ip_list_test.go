@@ -47,7 +47,6 @@ var _ = suite("compute/reserved-ip/list", func(t *testing.T, when spec.G, it spe
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("required flags are passed", func() {

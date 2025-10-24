@@ -56,7 +56,6 @@ var _ = suite("compute/domain/delete", func(t *testing.T, when spec.G, it spec.S
 			"compute",
 			"domain",
 		)
-
 	})
 
 	when("required flags are passed", func() {

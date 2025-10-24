@@ -26,19 +26,17 @@ var _ = suite("auth/remove", func(t *testing.T, when spec.G, it spec.S) {
 		tmpDir = t.TempDir()
 
 		testConfig = filepath.Join(tmpDir, "test-config.yml")
-		var testConfigBytes = []byte(`access-token: first-token
+		testConfigBytes := []byte(`access-token: first-token
 auth-contexts:
   second: second-token
 context: default
 `)
 
 		expect.NoError(os.WriteFile(testConfig, testConfigBytes, 0644))
-
 	})
 
 	when("a context is not provided", func() {
 		it("should error", func() {
-
 			cmd := exec.Command(builtBinaryPath,
 				"auth",
 				"remove",

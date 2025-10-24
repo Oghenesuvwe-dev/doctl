@@ -16,11 +16,10 @@ package commands
 import (
 	"bufio"
 	"bytes"
+	"errors"
 	"io"
 	"path/filepath"
 	"testing"
-
-	"errors"
 
 	"github.com/digitalocean/doctl"
 	"github.com/digitalocean/doctl/do"
@@ -284,6 +283,7 @@ func Test_displayAuthContextsJSON(t *testing.T) {
 		})
 	}
 }
+
 func TestTokenInputValidator(t *testing.T) {
 	tests := []struct {
 		name  string

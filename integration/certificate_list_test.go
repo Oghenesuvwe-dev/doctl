@@ -53,7 +53,6 @@ var _ = suite("compute/certificate/list", func(t *testing.T, when spec.G, it spe
 			"compute",
 			"certificate",
 		)
-
 	})
 
 	when("command is list", func() {

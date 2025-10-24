@@ -279,7 +279,6 @@ func RunPartnerAttachmentCreate(c *CmdConfig) error {
 
 // RunPartnerAttachmentGet retrieves an existing Partner Attachment by its identifier.
 func RunPartnerAttachmentGet(c *CmdConfig) error {
-
 	if err := ensurePartnerAttachmentType(c); err != nil {
 		return err
 	}
@@ -304,7 +303,6 @@ func RunPartnerAttachmentGet(c *CmdConfig) error {
 
 // RunPartnerAttachmentList lists Partner Attachments
 func RunPartnerAttachmentList(c *CmdConfig) error {
-
 	if err := ensurePartnerAttachmentType(c); err != nil {
 		return err
 	}
@@ -357,7 +355,6 @@ func RunPartnerAttachmentUpdate(c *CmdConfig) error {
 
 // RunPartnerAttachmentRegenerateServiceKey regenerates a service key of existing Partner Attachment
 func RunPartnerAttachmentRegenerateServiceKey(c *CmdConfig) error {
-
 	if err := ensurePartnerAttachmentType(c); err != nil {
 		return err
 	}
@@ -382,7 +379,6 @@ func RunPartnerAttachmentRegenerateServiceKey(c *CmdConfig) error {
 
 // RunGetPartnerAttachmentBGPAuthKey get a bgp auth key of existing Partner Attachment
 func RunGetPartnerAttachmentBGPAuthKey(c *CmdConfig) error {
-
 	if err := ensurePartnerAttachmentType(c); err != nil {
 		return err
 	}
@@ -407,7 +403,6 @@ func RunGetPartnerAttachmentBGPAuthKey(c *CmdConfig) error {
 
 // RunGetPartnerAttachmentServiceKey retrieves service key of existing Partner Attachment
 func RunGetPartnerAttachmentServiceKey(c *CmdConfig) error {
-
 	if err := ensurePartnerAttachmentType(c); err != nil {
 		return err
 	}
@@ -432,7 +427,6 @@ func RunGetPartnerAttachmentServiceKey(c *CmdConfig) error {
 
 // RunPartnerAttachmentDelete deletes an existing Partner Attachment by its identifier.
 func RunPartnerAttachmentDelete(c *CmdConfig) error {
-
 	if err := ensurePartnerAttachmentType(c); err != nil {
 		return err
 	}

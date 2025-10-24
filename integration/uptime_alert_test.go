@@ -322,7 +322,6 @@ var _ = suite("monitoring/uptime/alerts/delete", func(t *testing.T, when spec.G,
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("required flags are passed", func() {

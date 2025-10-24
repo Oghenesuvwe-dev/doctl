@@ -39,7 +39,9 @@ var (
 				Images: &godo.TaggedImagesResources{
 					Count: 0,
 				},
-			}}}
+			},
+		},
+	}
 	testTagList = do.Tags{
 		testTag,
 	}
@@ -250,7 +252,6 @@ func TestBuildTagResources(t *testing.T) {
 				require.NoError(t, err)
 			}
 			assert.Equal(t, tt.expected, got)
-
 		})
 	}
 }

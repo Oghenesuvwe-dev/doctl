@@ -70,7 +70,6 @@ var _ = suite("compute/reserved-ipv6-action/assign", func(t *testing.T, when spe
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("assign action is executed", func() {
@@ -115,7 +114,6 @@ var _ = suite("compute/reserved-ipv6-action/assign", func(t *testing.T, when spe
 			}
 		})
 	})
-
 })
 
 const (

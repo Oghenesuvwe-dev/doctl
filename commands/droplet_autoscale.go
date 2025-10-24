@@ -79,7 +79,7 @@ You can use droplet-autoscale to perform CRUD operations on a Droplet Autoscale 
 }
 
 func buildDropletAutoscaleRequestFromArgs(c *CmdConfig, r *godo.DropletAutoscalePoolRequest) error {
-	var hydrators = []func() error{
+	hydrators := []func() error{
 		func() error {
 			name, err := c.Doit.GetString(c.NS, doctl.ArgAutoscaleName)
 			if err != nil {

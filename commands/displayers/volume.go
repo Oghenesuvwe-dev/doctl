@@ -30,7 +30,6 @@ var _ Displayable = &Volume{}
 
 func (a *Volume) JSON(out io.Writer) error {
 	return writeJSON(a.Volumes, out)
-
 }
 
 func (a *Volume) Cols() []string {
@@ -50,7 +49,6 @@ func (a *Volume) ColMap() map[string]string {
 		"DropletIDs":       "Droplet IDs",
 		"Tags":             "Tags",
 	}
-
 }
 
 func (a *Volume) KV() []map[string]any {

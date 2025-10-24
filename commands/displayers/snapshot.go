@@ -32,14 +32,17 @@ func (s *Snapshot) JSON(out io.Writer) error {
 }
 
 func (s *Snapshot) Cols() []string {
-	return []string{"ID", "Name", "CreatedAt", "Regions", "ResourceId",
-		"ResourceType", "MinDiskSize", "Size", "Tags"}
+	return []string{
+		"ID", "Name", "CreatedAt", "Regions", "ResourceId",
+		"ResourceType", "MinDiskSize", "Size", "Tags",
+	}
 }
 
 func (s *Snapshot) ColMap() map[string]string {
 	return map[string]string{
 		"ID": "ID", "Name": "Name", "CreatedAt": "Created at", "Regions": "Regions",
-		"ResourceId": "Resource ID", "ResourceType": "Resource Type", "MinDiskSize": "Min Disk Size", "Size": "Size", "Tags": "Tags"}
+		"ResourceId": "Resource ID", "ResourceType": "Resource Type", "MinDiskSize": "Min Disk Size", "Size": "Size", "Tags": "Tags",
+	}
 }
 
 func (s *Snapshot) KV() []map[string]any {

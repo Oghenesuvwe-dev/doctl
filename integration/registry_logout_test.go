@@ -34,7 +34,6 @@ var _ = suite("registry/logout", func(t *testing.T, when spec.G, it spec.S) {
 			}
 
 			t.Fatalf("received unknown request: %s", dump)
-
 		}))
 
 		oAuthServer = httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
@@ -55,7 +54,6 @@ var _ = suite("registry/logout", func(t *testing.T, when spec.G, it spec.S) {
 			}
 
 			w.WriteHeader(http.StatusOK)
-
 		}))
 	})
 

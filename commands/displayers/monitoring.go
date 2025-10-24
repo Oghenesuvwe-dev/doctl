@@ -31,8 +31,10 @@ func (a *AlertPolicy) JSON(out io.Writer) error {
 }
 
 func (a *AlertPolicy) Cols() []string {
-	return []string{"UUID", "Type", "Description", "Compare",
-		"Value", "Window", "Entities", "Tags", "Emails", "Slack Channels", "Enabled"}
+	return []string{
+		"UUID", "Type", "Description", "Compare",
+		"Value", "Window", "Entities", "Tags", "Emails", "Slack Channels", "Enabled",
+	}
 }
 
 func (a *AlertPolicy) ColMap() map[string]string {

@@ -132,7 +132,7 @@ var _ = suite("auth/init", func(t *testing.T, when spec.G, it spec.S) {
 		})
 
 		it("validates and overwrites an existing token non-interactively", func() {
-			var testConfigBytes = []byte(`access-token: first-token
+			testConfigBytes := []byte(`access-token: first-token
 context: default
 `)
 
@@ -248,7 +248,7 @@ context: default
 		it("allows you to switch to that context", func() {
 			const nextContext = "next"
 
-			var testConfigBytes = []byte(`access-token: first-token
+			testConfigBytes := []byte(`access-token: first-token
 auth-contexts:
   next: second-token
 context: default
@@ -293,7 +293,7 @@ context: default
 
 	when("switching contexts containing a period", func() {
 		it("does not mangle that context", func() {
-			var testConfigBytes = []byte(`access-token: first-token
+			testConfigBytes := []byte(`access-token: first-token
 auth-contexts:
   test@example.com: second-token
 context: default
@@ -323,7 +323,7 @@ context: default
 
 	when("the DIGITALOCEAN_CONTEXT variable is set", func() {
 		it("uses that context for commands", func() {
-			var testConfigBytes = []byte(`access-token: first-token
+			testConfigBytes := []byte(`access-token: first-token
 auth-contexts:
   next: second-token
 context: default

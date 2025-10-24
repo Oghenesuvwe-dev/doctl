@@ -27,9 +27,8 @@ const (
 	DefaultSpecPath = ".do/app.yaml"
 )
 
-var (
-	// SampleDevConfigFile represents a sample dev config file with all options and descriptions.
-	SampleDevConfigFile = template.String(`
+// SampleDevConfigFile represents a sample dev config file with all options and descriptions.
+var SampleDevConfigFile = template.String(`
 	timeout: {{muted "An optional timeout duration for the build. Valid time units are 's', 'm', 'h'. Example: 15m30s"}}
 	app: {{muted "ID of an App Platform App to load the AppSpec from."}}
 	spec: {{muted "Path to an AppSpec to load for builds."}}
@@ -41,7 +40,6 @@ var (
 	    build_command: {{muted "Custom build command override for a given component."}}
 	    env_file: {{muted "Path to an env file to override envs for a given component."}}
 `, nil)
-)
 
 type NewAppDevOpts struct {
 	// DevConfigFilePath is an optional path to the config file. Defaults to <workspace context>/.do/<DefaultDevConfigFile>.

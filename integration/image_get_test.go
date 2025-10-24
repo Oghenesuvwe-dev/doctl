@@ -53,7 +53,6 @@ var _ = suite("compute/image/get", func(t *testing.T, when spec.G, it spec.S) {
 			"compute",
 			"image",
 		)
-
 	})
 
 	when("when image slug is provided", func() {

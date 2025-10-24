@@ -54,7 +54,6 @@ var _ = suite("compute/domain/get", func(t *testing.T, when spec.G, it spec.S) {
 			"compute",
 			"domain",
 		)
-
 	})
 
 	when("command is get", func() {

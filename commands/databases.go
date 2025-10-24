@@ -941,7 +941,6 @@ func RunDatabaseUserResetAuth(c *CmdConfig) error {
 	)
 
 	database, err := c.Databases().Get(databaseID)
-
 	if err != nil {
 		return err
 	}
@@ -2203,16 +2202,14 @@ You can configure multiple rules for the firewall by passing additional argument
 	- ` + "`" + `value` + "`" + ` is either the ID of a specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.
 	`
 
-	databaseFirewallAddDetails :=
-		`
+	databaseFirewallAddDetails := `
 Appends a single rule to the existing firewall rules of the specified database.
 
 This command requires the ` + "`" + `--rule` + "`" + ` flag specifying the resource or resources allowed to access the database cluster. The rule passed to the ` + "`" + `--rule` + "`" + ` flag must be in a <type>:<value> format where:
 	- ` + "`" + `type` + "`" + ` is the type of resource that the firewall rule allows to access the database cluster. Possible values are:  ` + "`" + `droplet` + "`" + `, ` + "`" + `k8s", ` + "`" + `ip_addr` + "`" + `, ` + "`" + `tag` + "`" + `, ` + "`" + `app` + "`" + `
 	- ` + "`" + `value` + "`" + ` is either the ID of a specific resource, the name of a tag applied to a group of resources, or the IP address that the firewall rule allows to access the database cluster.`
 
-	databaseFirewallRemoveDetails :=
-		`
+	databaseFirewallRemoveDetails := `
 Removes single rule from the list of firewall rules for a specified database. You can retrieve a firewall rule's UUIDs by calling:
 
 	doctl database firewalls list <database-cluster-id>`

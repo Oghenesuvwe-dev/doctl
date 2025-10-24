@@ -40,10 +40,12 @@ type FunctionRoute struct {
 	*godo.AgentFunction
 }
 
-type FunctionRoutes []FunctionRoute
-type ApiKeyInfo struct {
-	*godo.ApiKeyInfo
-}
+type (
+	FunctionRoutes []FunctionRoute
+	ApiKeyInfo     struct {
+		*godo.ApiKeyInfo
+	}
+)
 
 type AgentVersion struct {
 	*godo.AgentVersion
@@ -475,7 +477,6 @@ func (a *genAIService) ListAgentVersions(agentID string) (AgentVersions, error) 
 	}
 
 	return list, nil
-
 }
 
 func (a *genAIService) ListOpenAIAPIKeys() (OpenAiApiKeys, error) {

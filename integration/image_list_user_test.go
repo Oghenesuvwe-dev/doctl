@@ -56,7 +56,6 @@ var _ = suite("compute/image/list-user", func(t *testing.T, when spec.G, it spec
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("passing no flags", func() {

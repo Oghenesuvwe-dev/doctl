@@ -54,7 +54,6 @@ var _ = suite("compute/load-balancer/list", func(t *testing.T, when spec.G, it s
 			"compute",
 			"load-balancer",
 		)
-
 	})
 
 	when("command is list", func() {

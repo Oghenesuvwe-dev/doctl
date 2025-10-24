@@ -145,7 +145,6 @@ var _ = suite("database/firewalls", func(t *testing.T, when spec.G, it spec.S) {
 			fmt.Println(actual)
 		})
 	})
-
 })
 
 const (

@@ -47,7 +47,6 @@ var _ = suite("compute/reserved-ipv6/list", func(t *testing.T, when spec.G, it s
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("required flags are passed", func() {

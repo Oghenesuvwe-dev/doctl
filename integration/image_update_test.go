@@ -52,7 +52,6 @@ var _ = suite("compute/image/update", func(t *testing.T, when spec.G, it spec.S)
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("when all flags are passed", func() {
@@ -72,14 +71,13 @@ var _ = suite("compute/image/update", func(t *testing.T, when spec.G, it spec.S)
 			expect.Equal(strings.TrimSpace(imageUpdateOutput), strings.TrimSpace(string(output)))
 		})
 	})
-
 })
 
 const (
-	//Both imageUpdateOutput and imageUpdateResponse are
-	//exactly the same for get. We don't need additional
-	//return JSON as the parsing is functionally
-	//equivalent.
+	// Both imageUpdateOutput and imageUpdateResponse are
+	// exactly the same for get. We don't need additional
+	// return JSON as the parsing is functionally
+	// equivalent.
 	imageUpdateOutput   = imageGetOutput
 	imageUpdateRequest  = `{"name": "some-new-name"}`
 	imageUpdateResponse = imageGetResponse

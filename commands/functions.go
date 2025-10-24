@@ -256,7 +256,6 @@ func RunFunctionsInvoke(c *CmdConfig) error {
 	blocking := !noWait
 	result := blocking && !full
 	response, err := c.Serverless().InvokeFunction(c.Args[0], params, blocking, result)
-
 	if err != nil {
 		if response != nil {
 			activationResponse := response.(map[string]any)

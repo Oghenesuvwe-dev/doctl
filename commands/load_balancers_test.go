@@ -20,7 +20,8 @@ var (
 			SizeSlug:       "lb-small",
 			StickySessions: &godo.StickySessions{},
 			HealthCheck:    &godo.HealthCheck{},
-		}}
+		},
+	}
 
 	testLoadBalancerList = do.LoadBalancers{
 		testLoadBalancer,
@@ -279,6 +280,7 @@ func TestLoadBalancerUpdate(t *testing.T) {
 		assert.NoError(t, err)
 	})
 }
+
 func TestLoadBalancerUpdateGLB(t *testing.T) {
 	withTestClient(t, func(config *CmdConfig, tm *tcMocks) {
 		lbID := "cde2c0d6-41e3-479e-ba60-ad971227232c"

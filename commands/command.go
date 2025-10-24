@@ -114,5 +114,4 @@ func cmdBuilderWithInit(parent *Command, cr CmdRunner, cliText, shortdesc string
 	}
 
 	return c
-
 }

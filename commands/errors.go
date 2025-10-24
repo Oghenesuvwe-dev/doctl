@@ -100,6 +100,7 @@ func ensureOneArg(c *CmdConfig) error {
 func warn(msg string, args ...any) {
 	fmt.Fprintf(color.Output, "%s: %s\n", colorWarn, fmt.Sprintf(msg, args...))
 }
+
 func warnConfirm(msg string, args ...any) {
 	fmt.Fprintf(color.Output, "%s: %s", colorWarn, fmt.Sprintf(msg, args...))
 }

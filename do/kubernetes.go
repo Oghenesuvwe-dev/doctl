@@ -288,7 +288,6 @@ func (k8s *kubernetesClusterService) ListNodePools(clusterID string) (Kubernetes
 	}
 
 	return list, nil
-
 }
 
 func (k8s *kubernetesClusterService) UpdateNodePool(clusterID, poolID string, req *godo.KubernetesNodePoolUpdateRequest) (*KubernetesNodePool, error) {

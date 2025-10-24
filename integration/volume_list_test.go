@@ -47,7 +47,6 @@ var _ = suite("compute/volume/list", func(t *testing.T, when spec.G, it spec.S) 
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("required flags are passed", func() {

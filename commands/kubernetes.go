@@ -160,7 +160,6 @@ func (p *kubeconfigProvider) Local() (*clientcmdapi.Config, error) {
 					warn("Using the doctl Snap? Grant access to the doctl:kube-config plug to use this command with: sudo snap connect doctl:kube-config")
 					return nil, err
 				}
-
 			}
 		}
 
@@ -579,7 +578,6 @@ Deletes the specified node in the specified node pool, and then creates a new no
 	AddBoolFlag(cmdKubeNodeReplace, "skip-drain", "", false, "Skips draining the node before replacement")
 	cmdKubeNodeReplace.Example = `The following example replaces a node named ` + "`" + `example-node` + "`" + ` in a node pool named ` + "`" + `example-pool` + "`" + `: doctl kubernetes cluster node-pool replace-node example-cluster example-pool example-node`
 	return cmd
-
 }
 
 func kubernetesRegistryIntegration() *Command {
@@ -715,7 +713,7 @@ func (s *KubernetesCommandService) RunKubernetesClusterList(c *CmdConfig) error 
 	// Check the format flag to determine if the displayer should use the short
 	// layout of the cluster display. List uses the short version, but to format
 	// output that includes columns not in the short layout we need the full version.
-	var short = true
+	short := true
 	format, err := c.Doit.GetStringSlice(c.NS, doctl.ArgFormat)
 	if err != nil {
 		return err
@@ -1750,7 +1748,7 @@ func buildClusterCreateRequestFromArgs(c *CmdConfig, r *godo.KubernetesClusterCr
 		}
 	}
 
-	var clusterAutoscalerConfiguration = &godo.KubernetesClusterAutoscalerConfiguration{}
+	clusterAutoscalerConfiguration := &godo.KubernetesClusterAutoscalerConfiguration{}
 	thresholdStr, err := c.Doit.GetString(c.NS, doctl.ArgClusterAutoscalerScaleDownUtilizationThreshold)
 	if err != nil {
 		return err
@@ -1933,7 +1931,7 @@ func buildClusterUpdateRequestFromArgs(c *CmdConfig, r *godo.KubernetesClusterUp
 		}
 	}
 
-	var clusterAutoscalerConfiguration = &godo.KubernetesClusterAutoscalerConfiguration{}
+	clusterAutoscalerConfiguration := &godo.KubernetesClusterAutoscalerConfiguration{}
 	thresholdStr, err := c.Doit.GetString(c.NS, doctl.ArgClusterAutoscalerScaleDownUtilizationThreshold)
 	if err != nil {
 		return err

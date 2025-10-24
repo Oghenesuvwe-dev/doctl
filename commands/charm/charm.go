@@ -8,10 +8,8 @@ import (
 	"github.com/charmbracelet/lipgloss"
 )
 
-var (
-	// ErrCanceled represents a user-initiated cancellation.
-	ErrCanceled = fmt.Errorf("canceled")
-)
+// ErrCanceled represents a user-initiated cancellation.
+var ErrCanceled = fmt.Errorf("canceled")
 
 // Style is a styled component.
 type Style struct {

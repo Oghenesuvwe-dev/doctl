@@ -53,7 +53,6 @@ var _ = suite("1-click/list", func(t *testing.T, when spec.G, it spec.S) {
 			"-u", server.URL,
 			"1-click",
 		)
-
 	})
 
 	when("command is list", func() {

@@ -88,7 +88,6 @@ type CmdConfig struct {
 
 // NewCmdConfig creates an instance of a CmdConfig.
 func NewCmdConfig(ns string, dc doctl.Config, out io.Writer, args []string, initGodo bool) (*CmdConfig, error) {
-
 	cmdConfig := &CmdConfig{
 		NS:   ns,
 		Doit: dc,

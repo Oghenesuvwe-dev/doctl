@@ -64,8 +64,9 @@ var _ = suite("invoices/csv", func(t *testing.T, when spec.G, it spec.S) {
 
 		os.Remove(fpath)
 	})
-
 })
 
-const invoiceCSVOutput string = ""
-const invoiceCSVResponse string = "csv response"
+const (
+	invoiceCSVOutput   string = ""
+	invoiceCSVResponse string = "csv response"
+)

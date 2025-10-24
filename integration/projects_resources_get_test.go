@@ -231,7 +231,6 @@ var _ = suite("projects/resources/get", func(t *testing.T, when spec.G, it spec.
 			expect.Equal(strings.TrimSpace(projectsResourcesGetKubernetesOutput), strings.TrimSpace(string(output)))
 		})
 	})
-
 })
 
 const (

@@ -348,7 +348,6 @@ func RunActivationsLogs(c *CmdConfig) error {
 
 	listOptions := whisk.ActivationListOptions{Limit: limit, Name: functionFlag, Docs: true}
 	actvs, err := sls.ListActivations(listOptions)
-
 	if err != nil {
 		return err
 	}
@@ -382,7 +381,6 @@ func pollActivations(ec chan error, sls do.ServerlessService, writer io.Writer, 
 		case <-tc:
 			options := whisk.ActivationListOptions{Limit: requestLimit, Since: lastActivationTimestamp, Docs: true, Name: functionFlag}
 			actv, err := sls.ListActivations(options)
-
 			if err != nil {
 				ec <- err
 				ticker.Stop()

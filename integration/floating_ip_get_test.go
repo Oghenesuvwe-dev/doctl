@@ -47,7 +47,6 @@ var _ = suite("compute/floating-ip/get", func(t *testing.T, when spec.G, it spec
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("required flags are passed", func() {

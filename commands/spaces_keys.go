@@ -41,8 +41,7 @@ func SpacesKeys() *Command {
 	AddStringSliceFlag(cmdSpacesKeysCreate, "grants", "g", []string{},
 		`A comma-separated list of grants to add to the key. The permission should be either 'read', 'readwrite', or 'fullaccess'.
 Format: `+"`"+`"bucket=your-bucket;permission=your-permission"`+"`", requiredOpt())
-	cmdSpacesKeysCreate.Example =
-		`doctl spaces keys create my-key --grants 'bucket=my-bucket;permission=readwrite,bucket=my-other-bucket;permission=read'
+	cmdSpacesKeysCreate.Example = `doctl spaces keys create my-key --grants 'bucket=my-bucket;permission=readwrite,bucket=my-other-bucket;permission=read'
 doctl spaces keys create my-key --grants 'bucket=;permission=fullaccess'`
 
 	listSpacesKeysDesc := "List all keys for a Space."

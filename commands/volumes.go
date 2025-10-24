@@ -79,12 +79,10 @@ You can use a block storage volume snapshot ID as a flag with `+"`"+`doctl volum
 	cmdRunVolumeSnapshot.Example = `The following example creates a snapshot of a volume with the UUID ` + "`" + `f81d4fae-7dec-11d0-a765-00a0c91e6bf6` + "`" + `: doctl compute volume snapshot f81d4fae-7dec-11d0-a765-00a0c91e6bf6 --snapshot-name example-snapshot --tag frontend,backend`
 
 	return cmd
-
 }
 
 // RunVolumeList returns a list of volumes.
 func RunVolumeList(c *CmdConfig) error {
-
 	al := c.Volumes()
 
 	region, err := c.Doit.GetString(c.NS, doctl.ArgRegionSlug)
@@ -109,7 +107,7 @@ func RunVolumeList(c *CmdConfig) error {
 	var matchedList []do.Volume
 
 	for _, volume := range list {
-		var skip = true
+		skip := true
 		if len(matches) == 0 {
 			skip = false
 		} else {
@@ -207,14 +205,12 @@ func RunVolumeCreate(c *CmdConfig) error {
 	}
 	item := &displayers.Volume{Volumes: []do.Volume{*d}}
 	return c.Display(item)
-
 }
 
 // RunVolumeDelete deletes a volume.
 func RunVolumeDelete(c *CmdConfig) error {
 	if len(c.Args) == 0 {
 		return doctl.NewMissingArgsErr(c.NS)
-
 	}
 
 	force, err := c.Doit.GetBool(c.NS, doctl.ArgForce)
@@ -233,7 +229,6 @@ func RunVolumeDelete(c *CmdConfig) error {
 func RunVolumeGet(c *CmdConfig) error {
 	if len(c.Args) == 0 {
 		return doctl.NewMissingArgsErr(c.NS)
-
 	}
 	id := c.Args[0]
 	al := c.Volumes()

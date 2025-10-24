@@ -110,7 +110,6 @@ Volumes may only be resized upwards. The maximum size for a volume is 16TiB.`, W
 	cmdRunVolumeResize.Example = `The following example resizes a volume with the UUID ` + "`" + `f81d4fae-7dec-11d0-a765-00a0c91e6bf6` + "`" + ` to 120 GiB in the ` + "`" + `nyc1` + "`" + ` region: doctl compute volume-action resize f81d4fae-7dec-11d0-a765-00a0c91e6bf6 --size 120 --region nyc1`
 
 	return cmd
-
 }
 
 // RunVolumeAttach attaches a volume to a droplet.
@@ -123,7 +122,6 @@ func RunVolumeAttach(c *CmdConfig) error {
 		dropletID, err := strconv.Atoi(c.Args[1])
 		if err != nil {
 			return nil, err
-
 		}
 		a, err := das.Attach(volumeID, dropletID)
 		return a, err
@@ -184,7 +182,6 @@ func RunVolumeActionsGet(c *CmdConfig) error {
 	actionID, err := c.Doit.GetInt(c.NS, doctl.ArgActionID)
 	if err != nil {
 		return err
-
 	}
 
 	vas := c.VolumeActions()
@@ -212,5 +209,4 @@ func RunVolumeActionsList(c *CmdConfig) error {
 
 	item := &displayers.Action{Actions: vList}
 	return c.Display(item)
-
 }

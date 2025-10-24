@@ -8,7 +8,7 @@ import (
 )
 
 func TestFlagName(t *testing.T) {
-	var flag = "thing"
+	flag := "thing"
 	testFn := func(c *CmdConfig) error {
 		return nil
 	}

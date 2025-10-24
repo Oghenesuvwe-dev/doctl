@@ -186,7 +186,6 @@ func RunCertificateCreate(c *CmdConfig) error {
 
 // RunCertificateList lists certificates.
 func RunCertificateList(c *CmdConfig) error {
-
 	name, err := c.Doit.GetString(c.NS, doctl.ArgCertificateName)
 	if err != nil {
 		return err

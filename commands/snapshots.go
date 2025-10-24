@@ -118,7 +118,7 @@ func RunSnapshotList(c *CmdConfig) error {
 	}
 
 	for _, snapshot := range list {
-		var skip = true
+		skip := true
 		if len(matches) == 0 {
 			skip = false
 		} else {
@@ -141,7 +141,6 @@ func RunSnapshotList(c *CmdConfig) error {
 					break
 				}
 			}
-
 		}
 
 		if !skip {

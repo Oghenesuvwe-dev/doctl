@@ -56,7 +56,6 @@ func TestKnowledgeBaseList(t *testing.T) {
 
 func TestKnowledgeBaseCreate(t *testing.T) {
 	withTestClient(t, func(config *CmdConfig, tm *tcMocks) {
-
 		config.Doit.Set(config.NS, doctl.ArgKnowledgeBaseName, "Test Knowledge Base")
 		config.Doit.Set(config.NS, doctl.ArgKnowledgeBaseRegion, "tor1")
 		config.Doit.Set(config.NS, doctl.ArgKnowledgeBaseProjectID, "test-project-id")

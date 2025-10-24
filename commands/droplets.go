@@ -145,7 +145,6 @@ If you do not specify a region, the Droplet is created in the default region for
 
 // RunDropletActions returns a list of actions for a droplet.
 func RunDropletActions(c *CmdConfig) error {
-
 	ds := c.Droplets()
 
 	id, err := getDropletIDArg(c.NS, c.Args)
@@ -163,7 +162,6 @@ func RunDropletActions(c *CmdConfig) error {
 
 // RunDropletBackups returns a list of backup images for a droplet.
 func RunDropletBackups(c *CmdConfig) error {
-
 	ds := c.Droplets()
 
 	id, err := getDropletIDArg(c.NS, c.Args)
@@ -182,7 +180,6 @@ func RunDropletBackups(c *CmdConfig) error {
 
 // RunDropletCreate creates a droplet.
 func RunDropletCreate(c *CmdConfig) error {
-
 	if len(c.Args) < 1 {
 		return doctl.NewMissingArgsErr(c.NS)
 	}
@@ -649,12 +646,10 @@ func RunDropletGet(c *CmdConfig) error {
 		return nil
 	}
 	return matchDroplets(c.Args, ds, fn)
-
 }
 
 // RunDropletKernels returns a list of available kernels for a droplet.
 func RunDropletKernels(c *CmdConfig) error {
-
 	ds := c.Droplets()
 	id, err := getDropletIDArg(c.NS, c.Args)
 	if err != nil {
@@ -672,7 +667,6 @@ func RunDropletKernels(c *CmdConfig) error {
 
 // RunDropletList returns a list of droplets.
 func RunDropletList(c *CmdConfig) error {
-
 	ds := c.Droplets()
 
 	region, err := c.Doit.GetString(c.NS, doctl.ArgRegionSlug)
@@ -719,7 +713,7 @@ func RunDropletList(c *CmdConfig) error {
 	}
 
 	for _, droplet := range list {
-		var skip = true
+		skip := true
 		if len(matches) == 0 {
 			skip = false
 		} else {
@@ -747,7 +741,6 @@ func RunDropletList(c *CmdConfig) error {
 
 // RunDropletNeighbors returns a list of droplet neighbors.
 func RunDropletNeighbors(c *CmdConfig) error {
-
 	ds := c.Droplets()
 
 	id, err := getDropletIDArg(c.NS, c.Args)
@@ -766,7 +759,6 @@ func RunDropletNeighbors(c *CmdConfig) error {
 
 // RunDropletSnapshots returns a list of available kernels for a droplet.
 func RunDropletSnapshots(c *CmdConfig) error {
-
 	ds := c.Droplets()
 	id, err := getDropletIDArg(c.NS, c.Args)
 	if err != nil {

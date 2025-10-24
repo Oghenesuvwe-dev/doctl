@@ -135,9 +135,11 @@ func newPagerModel(ctx context.Context, buffer WriterStringer, title string, tit
 	return m
 }
 
-type msgQuit struct{}
-type msgUpdate struct{}
-type msgTick struct{}
+type (
+	msgQuit   struct{}
+	msgUpdate struct{}
+	msgTick   struct{}
+)
 
 func (m *pagerModel) Init() tea.Cmd {
 	cmds := []tea.Cmd{

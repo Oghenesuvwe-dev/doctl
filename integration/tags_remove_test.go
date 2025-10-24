@@ -137,5 +137,4 @@ var _ = suite("compute/tags/remove", func(t *testing.T, when spec.G, it spec.S) 
 			expect.Empty(output)
 		})
 	})
-
 })

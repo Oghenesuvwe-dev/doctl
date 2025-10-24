@@ -28,7 +28,6 @@ var _ Displayable = &UptimeCheck{}
 
 func (uc *UptimeCheck) JSON(out io.Writer) error {
 	return writeJSON(uc.UptimeChecks, out)
-
 }
 
 func (uc *UptimeCheck) Cols() []string {

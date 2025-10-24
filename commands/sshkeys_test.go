@@ -104,7 +104,6 @@ func TestKeysDeleteByFingerprint(t *testing.T) {
 		err := RunKeyDelete(config)
 		assert.NoError(t, err)
 	})
-
 }
 
 func TestKeysUpdateByID(t *testing.T) {
@@ -119,7 +118,6 @@ func TestKeysUpdateByID(t *testing.T) {
 		err := RunKeyUpdate(config)
 		assert.NoError(t, err)
 	})
-
 }
 
 func TestKeysUpdateByFingerprint(t *testing.T) {
@@ -134,7 +132,6 @@ func TestKeysUpdateByFingerprint(t *testing.T) {
 		err := RunKeyUpdate(config)
 		assert.NoError(t, err)
 	})
-
 }
 
 func TestSSHPublicKeyImportWithName(t *testing.T) {
