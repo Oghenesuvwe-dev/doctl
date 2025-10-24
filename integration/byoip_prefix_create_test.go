@@ -68,7 +68,6 @@ var _ = suite("network/byoip-prefix/create", func(t *testing.T, when spec.G, it 
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("the valid request", func() {
@@ -93,7 +92,6 @@ var _ = suite("network/byoip-prefix/create", func(t *testing.T, when spec.G, it 
 			}
 		})
 	})
-
 })
 
 const (

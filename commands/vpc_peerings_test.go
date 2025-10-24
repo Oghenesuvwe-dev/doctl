@@ -1,8 +1,9 @@
 package commands
 
 import (
-	"github.com/digitalocean/doctl"
 	"testing"
+
+	"github.com/digitalocean/doctl"
 
 	"github.com/digitalocean/doctl/do"
 	"github.com/digitalocean/godo"

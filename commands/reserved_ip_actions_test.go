@@ -34,7 +34,6 @@ func TestReservedIPActionsGet(t *testing.T) {
 		err := RunReservedIPActionsGet(config)
 		assert.NoError(t, err)
 	})
-
 }
 
 func TestReservedIPActionsAssign(t *testing.T) {

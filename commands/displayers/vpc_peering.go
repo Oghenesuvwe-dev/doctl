@@ -1,9 +1,10 @@
 package displayers
 
 import (
-	"github.com/digitalocean/doctl/do"
 	"io"
 	"strings"
+
+	"github.com/digitalocean/doctl/do"
 )
 
 type VPCPeering struct {

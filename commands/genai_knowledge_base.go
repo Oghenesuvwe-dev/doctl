@@ -193,7 +193,6 @@ func KnowledgeBaseCmd() *Command {
 
 // RunKnowledgeBaseList lists all knowledge bases for agents.
 func RunKnowledgeBasesList(c *CmdConfig) error {
-
 	knowledgeBases, err := c.GenAI().ListKnowledgeBases()
 	if err != nil {
 		return err
@@ -215,7 +214,6 @@ func RunKnowledgeBaseGet(c *CmdConfig) error {
 
 // RunKnowledgeBaseCreate creates a new knowledge base.
 func RunKnowledgeBaseCreate(c *CmdConfig) error {
-
 	name, err := c.Doit.GetString(c.NS, doctl.ArgKnowledgeBaseName)
 	if err != nil {
 		return err

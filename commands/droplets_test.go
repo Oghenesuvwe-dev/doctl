@@ -179,7 +179,8 @@ func TestDropletCreateWithTag(t *testing.T) {
 			IPv6:              false,
 			PrivateNetworking: false,
 			UserData:          "#cloud-config",
-			Tags:              []string{"my-tag"}}
+			Tags:              []string{"my-tag"},
+		}
 		tm.droplets.EXPECT().Create(dcr, false).Return(&testDroplet, nil)
 
 		config.Args = append(config.Args, "droplet")
@@ -299,7 +300,6 @@ func TestDropletDelete(t *testing.T) {
 
 		err := RunDropletDelete(config)
 		assert.NoError(t, err)
-
 	})
 }
 
@@ -383,7 +383,6 @@ func TestDropletDelete_MixedNameAndType(t *testing.T) {
 		err := RunDropletDelete(config)
 		assert.NoError(t, err)
 	})
-
 }
 
 func TestDropletGet(t *testing.T) {

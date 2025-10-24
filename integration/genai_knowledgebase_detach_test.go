@@ -79,7 +79,6 @@ var _ = suite("genai/knowledge-base/detach", func(t *testing.T, when spec.G, it 
 			output, err := cmd.CombinedOutput()
 			expect.NoError(err, fmt.Sprintf("received error output: %s", output))
 			expect.Contains(strings.TrimSpace(string(output)), "Knowledge Base detached successfully")
-
 		})
 	})
 

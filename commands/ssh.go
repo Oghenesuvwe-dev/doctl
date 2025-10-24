@@ -27,9 +27,7 @@ import (
 	"github.com/digitalocean/doctl/pkg/ssh"
 )
 
-var (
-	sshHostRE = regexp.MustCompile(`^((?P<m1>\w+)@)?(?P<m2>.*?)(:(?P<m3>\d+))?$`)
-)
+var sshHostRE = regexp.MustCompile(`^((?P<m1>\w+)@)?(?P<m2>.*?)(:(?P<m3>\d+))?$`)
 
 // SSH creates the ssh commands hierarchy
 func SSH(parent *Command) *Command {
@@ -82,7 +80,7 @@ func RunSSH(c *CmdConfig) error {
 		return err
 	}
 
-	var opts = make(ssh.Options)
+	opts := make(ssh.Options)
 	opts[doctl.ArgsSSHAgentForwarding], err = c.Doit.GetBool(c.NS, doctl.ArgsSSHAgentForwarding)
 	if err != nil {
 		return err

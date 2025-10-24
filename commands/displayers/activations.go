@@ -117,6 +117,7 @@ func GetActivationPackageName(a whisk.Activation) string {
 
 	return ""
 }
+
 func getActivationAnnotationValue(a whisk.Activation, key string) any {
 	if a.Annotations == nil {
 		return nil

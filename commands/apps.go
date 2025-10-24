@@ -885,7 +885,6 @@ func RunAppsConsole(c *CmdConfig) error {
 		InstanceName: instanceName,
 	}
 	execResp, err := c.Apps().GetExecWithOpts(appID, componentName, opts)
-
 	if err != nil {
 		return err
 	}
@@ -1004,7 +1003,6 @@ func RunAppsPropose(c *CmdConfig) error {
 		Spec:  appSpec,
 		AppID: appID,
 	})
-
 	if err != nil {
 		// most likely an invalid app spec. The error message would start with "error validating app spec"
 		return err

@@ -128,7 +128,6 @@ func (bp *BYOIPPrefixCreate) ColMap() map[string]string {
 }
 
 func (bp *BYOIPPrefixCreate) KV() []map[string]any {
-
 	out := map[string]any{
 		"Region": bp.Region,
 		"Status": bp.Status,

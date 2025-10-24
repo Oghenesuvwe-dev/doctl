@@ -52,7 +52,6 @@ var _ = suite("invoices/get", func(t *testing.T, when spec.G, it spec.S) {
 		expect.NoError(err, fmt.Sprintf("received error output: %s", output))
 		expect.Equal(strings.TrimSpace(invoiceGetOutput), strings.TrimSpace(string(output)))
 	})
-
 })
 
 const invoiceGetOutput string = `
@@ -61,6 +60,7 @@ Resource ID    Resource UUID              Product           Description         
 2345           load-balancer-2345-uuid    Load Balancers    My Example Load Balancer    group                23.45     744         Hours            2018-06-20T08:44:38Z    2018-06-21T08:44:38Z    My Second Project    paas
 
 `
+
 const invoiceGetResponse string = `
 {
 	"invoice_items": [

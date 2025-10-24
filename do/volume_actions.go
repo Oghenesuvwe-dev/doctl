@@ -26,7 +26,6 @@ func NewVolumeActionsService(godoClient *godo.Client) VolumeActionsService {
 	return &volumeActionsService{
 		client: godoClient,
 	}
-
 }
 
 func (vas *volumeActionsService) handleActionResponse(a *godo.Action, err error) (*Action, error) {
@@ -40,13 +39,11 @@ func (vas *volumeActionsService) handleActionResponse(a *godo.Action, err error)
 func (vas *volumeActionsService) Attach(volumeID string, dropletID int) (*Action, error) {
 	a, _, err := vas.client.StorageActions.Attach(context.TODO(), volumeID, dropletID)
 	return vas.handleActionResponse(a, err)
-
 }
 
 func (vas *volumeActionsService) Detach(volumeID string, dropletID int) (*Action, error) {
 	a, _, err := vas.client.StorageActions.DetachByDropletID(context.TODO(), volumeID, dropletID)
 	return vas.handleActionResponse(a, err)
-
 }
 
 func (vas *volumeActionsService) Get(volumeID string, actionID int) (*Action, error) {

@@ -56,7 +56,6 @@ var _ = suite("compute/reserved-ipv6/create", func(t *testing.T, when spec.G, it
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("the region flag is provided", func() {
@@ -79,7 +78,6 @@ var _ = suite("compute/reserved-ipv6/create", func(t *testing.T, when spec.G, it
 			}
 		})
 	})
-
 })
 
 const (

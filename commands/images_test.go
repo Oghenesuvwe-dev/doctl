@@ -113,7 +113,6 @@ func TestImagesDelete(t *testing.T) {
 		err := RunImagesDelete(config)
 		assert.NoError(t, err)
 	})
-
 }
 
 func TestImagesDeleteMultiple(t *testing.T) {
@@ -127,7 +126,6 @@ func TestImagesDeleteMultiple(t *testing.T) {
 		err := RunImagesDelete(config)
 		assert.NoError(t, err)
 	})
-
 }
 
 func TestImagesCreate(t *testing.T) {

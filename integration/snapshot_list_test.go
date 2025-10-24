@@ -237,9 +237,8 @@ var _ = suite("compute/snapshot/list", func(t *testing.T, when spec.G, it spec.S
 	})
 })
 
-var (
-	snapshotListVolumeByRegionResponse = map[string]string{
-		"nyc1": `{
+var snapshotListVolumeByRegionResponse = map[string]string{
+	"nyc1": `{
 		  "snapshots": [
 			{
 			  "id": "0a343fac-eacf-11e9-b96b-0a58ac144633",
@@ -274,7 +273,7 @@ var (
 		  }
 		}`,
 
-		"lon1": `{
+	"lon1": `{
 			  "snapshots": [
 				{
 				  "id": "2e47a7c9-8b73-46db-9d33-f40c705e9e01",
@@ -308,8 +307,7 @@ var (
 				"total": 2
 			  }
 			}`,
-	}
-)
+}
 
 const (
 	snapshotListResponse = `

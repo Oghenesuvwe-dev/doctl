@@ -86,13 +86,11 @@ func RunTriggersGet(c *CmdConfig) error {
 func RunTriggerToggle(isEnabled bool) func(*CmdConfig) error {
 	return func(c *CmdConfig) error {
 		err := ensureOneArg(c)
-
 		if err != nil {
 			return err
 		}
 
 		trigger, err := c.Serverless().UpdateTrigger(context.TODO(), c.Args[0], &do.UpdateTriggerRequest{IsEnabled: isEnabled})
-
 		if err != nil {
 			return err
 		}

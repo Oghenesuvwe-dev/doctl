@@ -336,7 +336,6 @@ func (a *ApiKeyInfo) KV() []map[string]any {
 	}
 	out := make([]map[string]any, 0, len(a.ApiKeyInfo))
 	for _, apikey := range a.ApiKeyInfo {
-
 		out = append(out, map[string]any{
 			"Id":        apikey.Uuid,
 			"Name":      apikey.Name,
@@ -389,7 +388,6 @@ func (a *AgentVersion) KV() []map[string]any {
 	}
 	out := make([]map[string]any, 0, len(a.AgentVersions))
 	for _, v := range a.AgentVersions {
-
 		out = append(out, map[string]any{
 			"AgentUuid":        v.AgentUuid,
 			"CanRollback":      v.CanRollback,
@@ -464,6 +462,7 @@ var _ Displayable = &Model{}
 func (m *Model) JSON(out io.Writer) error {
 	return writeJSON(m.Models, out)
 }
+
 func (m *Model) Cols() []string {
 	return []string{
 		"Id",

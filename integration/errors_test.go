@@ -9,19 +9,15 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-var (
-	testSpellingError = `Error: unknown command "apa" for "doctl"
+var testSpellingError = `Error: unknown command "apa" for "doctl"
 
 Did you mean this?
 	apps
 
 Run 'doctl --help' for usage.`
-)
 
 var _ = suite("errors", func(t *testing.T, when spec.G, it spec.S) {
-	var (
-		expect *require.Assertions
-	)
+	var expect *require.Assertions
 	it.Before(func() {
 		expect = require.New(t)
 	})

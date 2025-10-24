@@ -63,7 +63,6 @@ var _ = suite("database/replica", func(t *testing.T, when spec.G, it spec.S) {
 			output, err := cmd.CombinedOutput()
 			expect.NoError(err, fmt.Sprintf("received error output: %s", output))
 		})
-
 	})
 })
 

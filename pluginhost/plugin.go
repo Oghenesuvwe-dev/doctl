@@ -60,7 +60,7 @@ func (h *Host) Call(method string, args ...string) (string, error) {
 }
 
 func debug(msg string) {
-	//if viper.GetBool("verbose") {
+	// if viper.GetBool("verbose") {
 	log.Println(msg)
 	//}
 }

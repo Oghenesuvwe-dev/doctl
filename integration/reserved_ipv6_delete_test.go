@@ -46,7 +46,6 @@ var _ = suite("compute/reserved-ipv6/delete", func(t *testing.T, when spec.G, it
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("required flags are passed", func() {

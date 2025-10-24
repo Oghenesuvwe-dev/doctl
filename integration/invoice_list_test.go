@@ -51,7 +51,6 @@ var _ = suite("invoices", func(t *testing.T, when spec.G, it spec.S) {
 		expect.NoError(err, fmt.Sprintf("received error output: %s", output))
 		expect.Equal(strings.TrimSpace(invoiceListOutput), strings.TrimSpace(string(output)))
 	})
-
 })
 
 const invoiceListOutput string = `
@@ -60,6 +59,7 @@ preview                   34.56     2020-02
 example-invoice-uuid-1    12.34     2020-01
 example-invoice-uuid-2    23.45     2019-12
 `
+
 const invoiceListResponse string = `
 {
 	"invoices": [

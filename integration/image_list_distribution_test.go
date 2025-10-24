@@ -54,7 +54,6 @@ var _ = suite("compute/image/list-distribution", func(t *testing.T, when spec.G,
 				t.Fatalf("received unknown request: %s", dump)
 			}
 		}))
-
 	})
 
 	when("passing no flags", func() {

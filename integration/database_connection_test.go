@@ -65,7 +65,6 @@ var _ = suite("database/connection", func(t *testing.T, when spec.G, it spec.S) 
 			output, err := cmd.CombinedOutput()
 			expect.NoError(err, fmt.Sprintf("received error output: %s", output))
 			expect.Equal("db-postgresql-nyc3-test.db.ondigitalocean.com", strings.TrimSpace(string(output)))
-
 		})
 	})
 
@@ -85,10 +84,8 @@ var _ = suite("database/connection", func(t *testing.T, when spec.G, it spec.S) 
 			output, err := cmd.CombinedOutput()
 			expect.NoError(err, fmt.Sprintf("received error output: %s", output))
 			expect.Equal("private-db-postgresql-nyc3-test.db.ondigitalocean.com", strings.TrimSpace(string(output)))
-
 		})
 	})
-
 })
 
 const (

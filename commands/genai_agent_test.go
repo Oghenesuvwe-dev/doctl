@@ -91,6 +91,7 @@ func TestRunAgentList(t *testing.T) {
 		assert.NoError(t, err)
 	})
 }
+
 func TestRunAgentUpdate(t *testing.T) {
 	withTestClient(t, func(config *CmdConfig, tm *tcMocks) {
 		agentID := "00000000-0000-4000-8000-000000000000"
@@ -147,6 +148,7 @@ func TestRunAgentDelete_WithoutForce(t *testing.T) {
 		assert.Contains(t, err.Error(), "operation aborted")
 	})
 }
+
 func TestRunAgentUpdateVisibility(t *testing.T) {
 	withTestClient(t, func(config *CmdConfig, tm *tcMocks) {
 		config.Args = []string{"00000000-0000-4000-8000-000000000000"}

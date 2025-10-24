@@ -683,7 +683,6 @@ func (ds *databasesService) UpdateFirewallRules(databaseID string, req *godo.Dat
 
 func (ds *databasesService) ListOptions() (*DatabaseOptions, error) {
 	options, _, err := ds.client.Databases.ListOptions(context.TODO())
-
 	if err != nil {
 		return nil, err
 	}

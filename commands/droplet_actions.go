@@ -369,7 +369,6 @@ func RunDropletActionPowerCycle(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -408,7 +407,6 @@ func RunDropletActionPowerOff(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -428,7 +426,6 @@ func RunDropletActionPowerOn(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -448,7 +445,6 @@ func RunDropletActionPasswordReset(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -468,7 +464,6 @@ func RunDropletActionEnableIPv6(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -488,7 +483,6 @@ func RunDropletActionEnablePrivateNetworking(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -508,7 +502,6 @@ func RunDropletActionRestore(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -534,7 +527,6 @@ func RunDropletActionResize(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -564,7 +556,6 @@ func RunDropletActionRebuild(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -594,7 +585,6 @@ func RunDropletActionRename(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -619,7 +609,6 @@ func RunDropletActionChangeKernel(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}
@@ -644,7 +633,6 @@ func RunDropletActionSnapshot(c *CmdConfig) error {
 			return nil, err
 		}
 		id, err := ContextualAtoi(c.Args[0], dropletIDResource)
-
 		if err != nil {
 			return nil, err
 		}

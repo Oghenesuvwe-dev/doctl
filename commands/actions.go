@@ -94,9 +94,11 @@ type actionsByCompletedAt do.Actions
 func (a actionsByCompletedAt) Len() int {
 	return len(a)
 }
+
 func (a actionsByCompletedAt) Swap(i, j int) {
 	a[i], a[j] = a[j], a[i]
 }
+
 func (a actionsByCompletedAt) Less(i, j int) bool {
 	return a[i].CompletedAt.Before(a[j].CompletedAt.Time)
 }

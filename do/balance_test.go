@@ -62,6 +62,7 @@ func (mr *MockBalanceServiceMockRecorder) Get(arg0 any) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Get", reflect.TypeOf((*MockBalanceService)(nil).Get), arg0)
 }
+
 func TestBalanceServiceGet(t *testing.T) {
 	ctrl := gomock.NewController(t)
 	defer ctrl.Finish()

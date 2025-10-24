@@ -208,7 +208,6 @@ func RunAuthRemove(c *CmdConfig) error {
 	}
 
 	err := c.removeContext(context)
-
 	if err != nil {
 		return fmt.Errorf("Context not found")
 	}

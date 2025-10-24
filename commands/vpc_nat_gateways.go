@@ -58,7 +58,7 @@ const (
 )
 
 func buildVPCNATGatewayRequestFromArgs(c *CmdConfig, r *godo.VPCNATGatewayRequest, requestType requestType) error {
-	var hydrators = []func() error{
+	hydrators := []func() error{
 		func() error {
 			name, err := c.Doit.GetString(c.NS, doctl.ArgVPCNATGatewayName)
 			if err != nil {

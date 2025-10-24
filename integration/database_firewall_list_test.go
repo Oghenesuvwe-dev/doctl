@@ -64,7 +64,6 @@ var _ = suite("database/firewalls", func(t *testing.T, when spec.G, it spec.S) {
 			expect.Equal(strings.TrimSpace(databasesFirewallRuleOutput), strings.TrimSpace(string(output)))
 		})
 	})
-
 })
 
 const (

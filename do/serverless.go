@@ -594,7 +594,6 @@ func (s *serverlessService) Exec(cmd *exec.Cmd) (ServerlessOutput, error) {
 
 // Stream is like Exec but assumes that output will not be captured and can be streamed.
 func (s *serverlessService) Stream(cmd *exec.Cmd) error {
-
 	return cmd.Run()
 }
 
@@ -885,7 +884,6 @@ func (s *serverlessService) DeletePackage(name string, recursive bool) error {
 			funcName := name + "/" + fn.Name
 
 			err = s.DeleteFunction(funcName, true)
-
 			if err != nil {
 				return err
 			}
@@ -1129,7 +1127,6 @@ func (s *serverlessService) UpdateTrigger(ctx context.Context, trigger string, o
 
 	path := fmt.Sprintf("v2/functions/namespaces/%s/triggers/%s", creds.Namespace, trigger)
 	req, err := s.client.NewRequest(ctx, http.MethodPut, path, opts)
-
 	if err != nil {
 		return empty, err
 	}
@@ -1213,7 +1210,6 @@ func readProjectConfig(configPath string) (*ServerlessSpec, error) {
 
 func validateConfig(config *ServerlessSpec) error {
 	forbiddenConfigs, err := ListForbiddenConfigs(config)
-
 	if err != nil {
 		return err
 	}
@@ -1406,7 +1402,7 @@ func ListForbiddenConfigs(serverlessProject *ServerlessSpec) ([]string, error) {
 		}
 		forbiddenConfigs = append(forbiddenConfigs, packageLevelForbiddenConfigs...)
 
-		//validate function-level forbidden configs
+		// validate function-level forbidden configs
 		for _, a := range p.Functions {
 			actionLevelForbiddenConfigs, err := validateFunctionLevelFields(a)
 			if err != nil {
@@ -1421,7 +1417,7 @@ func ListForbiddenConfigs(serverlessProject *ServerlessSpec) ([]string, error) {
 // ListInvalidWebsecureValues returns a list of forbidden websecure values for an action in a project spec.
 // a valid websecure value is any string other than "true"
 func ListInvalidWebsecureValues(serverlessProject *ServerlessSpec) ([]string, error) {
-	var invalidValues = []string{}
+	invalidValues := []string{}
 
 	for _, p := range serverlessProject.Packages {
 		for _, f := range p.Functions {

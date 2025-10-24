@@ -935,7 +935,6 @@ func TestDatabaseUpdateMaintenance(t *testing.T) {
 }
 
 func TestDatabaseInstallUpdate(t *testing.T) {
-
 	// Success
 	withTestClient(t, func(config *CmdConfig, tm *tcMocks) {
 		tm.databases.EXPECT().InstallUpdate(testDBCluster.ID).Return(nil)

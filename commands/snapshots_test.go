@@ -111,6 +111,5 @@ func TestSnapshotDelete(t *testing.T) {
 
 		err := RunSnapshotDelete(config)
 		assert.NoError(t, err)
-
 	})
 }

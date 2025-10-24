@@ -25,7 +25,6 @@ import (
 
 // VPCs creates the vpcs command.
 func VPCs() *Command {
-
 	cmd := &Command{
 		Command: &cobra.Command{
 			Use:   "vpcs",

@@ -94,7 +94,6 @@ func RunKeyGet(c *CmdConfig) error {
 
 	rawKey := c.Args[0]
 	k, err := ks.Get(rawKey)
-
 	if err != nil {
 		return err
 	}

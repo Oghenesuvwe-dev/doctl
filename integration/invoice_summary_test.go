@@ -52,13 +52,13 @@ var _ = suite("invoices/summary", func(t *testing.T, when spec.G, it spec.S) {
 		expect.NoError(err, fmt.Sprintf("received error output: %s", output))
 		expect.Equal(strings.TrimSpace(invoiceSummaryOutput), strings.TrimSpace(string(output)))
 	})
-
 })
 
 const invoiceSummaryOutput string = `
 Invoice UUID            Billing Period    Amount    User Name        Company         Email                   Product Charges Amount    Overages Amount    Taxes Amount    Credits and Adjustments Amount
 example-invoice-uuid    2020-01           27.13     Frodo Baggins    DigitalOcean    fbaggins@example.com    12.34                     3.45               4.56            6.78
 `
+
 const invoiceSummaryResponse string = `
 {
 	"invoice_uuid": "example-invoice-uuid",

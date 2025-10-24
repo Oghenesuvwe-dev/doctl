@@ -10,10 +10,8 @@ import (
 	"github.com/digitalocean/doctl/commands/charm"
 )
 
-var (
-	// ListDefaultStyle is the default list style.
-	ListDefaultStyle = charm.NewStyle(lipgloss.NewStyle().Margin(1, 1))
-)
+// ListDefaultStyle is the default list style.
+var ListDefaultStyle = charm.NewStyle(lipgloss.NewStyle().Margin(1, 1))
 
 type Item list.Item
 

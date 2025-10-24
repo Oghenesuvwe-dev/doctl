@@ -221,9 +221,7 @@ func RunServerlessUninstall(c *CmdConfig) error {
 
 // RunServerlessConnect implements the serverless connect command
 func RunServerlessConnect(c *CmdConfig) error {
-	var (
-		err error
-	)
+	var err error
 	sls := c.Serverless()
 
 	// Support the hidden capability to connect to non-production clusters to support various kinds of testing.

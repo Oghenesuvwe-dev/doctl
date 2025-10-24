@@ -137,7 +137,6 @@ func RunImagesListDistribution(c *CmdConfig) error {
 
 	item := &displayers.Image{Images: list}
 	return c.Display(item)
-
 }
 
 // RunImagesListApplication lists application images.
@@ -253,7 +252,6 @@ func RunImagesDelete(c *CmdConfig) error {
 	}
 
 	if force || AskForConfirmDelete("image", len(c.Args)) == nil {
-
 		for _, el := range c.Args {
 			id, err := strconv.Atoi(el)
 			if err != nil {
@@ -263,7 +261,6 @@ func RunImagesDelete(c *CmdConfig) error {
 				return err
 			}
 		}
-
 	} else {
 		return errOperationAborted
 	}

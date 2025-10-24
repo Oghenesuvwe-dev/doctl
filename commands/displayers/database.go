@@ -500,7 +500,7 @@ func (dbl *DatabaseLayoutOptions) KV() []map[string]any {
 		}
 	}
 	keys := make([]string, 0)
-	for k, _ := range slugNodeMap {
+	for k := range slugNodeMap {
 		keys = append(keys, k)
 	}
 	// sort keys to have deterministic ordering
@@ -693,7 +693,6 @@ func (dr *DatabaseFirewallRules) Cols() []string {
 }
 
 func (dr *DatabaseFirewallRules) ColMap() map[string]string {
-
 	return map[string]string{
 		"UUID":        "UUID",
 		"ClusterUUID": "ClusterUUID",
@@ -737,7 +736,6 @@ func (dt *DatabaseKafkaTopics) Cols() []string {
 }
 
 func (dt *DatabaseKafkaTopics) ColMap() map[string]string {
-
 	return map[string]string{
 		"Name":              "Name",
 		"State":             "State",
@@ -780,7 +778,6 @@ func (dp *DatabaseKafkaTopicPartitions) Cols() []string {
 }
 
 func (dp *DatabaseKafkaTopicPartitions) ColMap() map[string]string {
-
 	return map[string]string{
 		"Id":             "Id",
 		"InSyncReplicas": "InSyncReplicas",
@@ -823,7 +820,6 @@ func (dt *DatabaseKafkaTopic) Cols() []string {
 }
 
 func (dt *DatabaseKafkaTopic) ColMap() map[string]string {
-
 	return map[string]string{
 		"key":   "key",
 		"value": "value",
@@ -2311,7 +2307,6 @@ func (dr *DatabaseEvents) Cols() []string {
 }
 
 func (dr *DatabaseEvents) ColMap() map[string]string {
-
 	return map[string]string{
 		"ID":          "ID",
 		"ServiceName": "Cluster Name",
@@ -2359,7 +2354,6 @@ func (dt *DatabaseOpenSearchIndexes) Cols() []string {
 }
 
 func (dt *DatabaseOpenSearchIndexes) ColMap() map[string]string {
-
 	return map[string]string{
 		"Index Name":        "Index Name",
 		"Status":            "Status",

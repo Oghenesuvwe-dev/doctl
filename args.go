@@ -301,7 +301,7 @@ const (
 	ArgTagNames = "tag-names"
 	// ArgTag specifies tag.  --tag can be repeated or multiple tags can be , separated.
 	ArgTag = "tag"
-	//ArgTemplate is template format
+	// ArgTemplate is template format
 	ArgTemplate = "template"
 	// ArgTimeout is a timeout duration
 	ArgTimeout = "timeout"
@@ -613,7 +613,7 @@ const (
 	// ArgOneClickType is the type of 1-Click
 	ArgOneClickType = "type"
 
-	//ArgDangerous indicates whether to delete the cluster and all it's associated resources
+	// ArgDangerous indicates whether to delete the cluster and all it's associated resources
 	ArgDangerous = "dangerous"
 
 	// ArgDatabaseFirewallRule the firewall rules.
@@ -788,7 +788,7 @@ const (
 	// ArgFunctionIDs is the name of the function.
 	ArgFunctionID = "function-id"
 
-	//ArgFunctionName is the name of the function.
+	// ArgFunctionName is the name of the function.
 	ArgFunctionName = "name"
 
 	// ArgFunctionDescription is the description of the function.

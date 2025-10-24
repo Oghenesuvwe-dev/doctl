@@ -11,7 +11,6 @@ import (
 )
 
 func TestParseURN(t *testing.T) {
-
 	tests := []struct {
 		name        string
 		in          string
@@ -64,7 +63,6 @@ func TestParseURN(t *testing.T) {
 				require.NoError(t, err)
 			}
 			assert.Equal(t, tt.expected, got)
-
 		})
 	}
 }

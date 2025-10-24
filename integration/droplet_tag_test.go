@@ -152,7 +152,6 @@ var _ = suite("compute/droplet/tag", func(t *testing.T, when spec.G, it spec.S) 
 					output, err := cmd.CombinedOutput()
 					expect.Error(err)
 					expect.Regexp(regexp.MustCompile(errRegex), strings.TrimSpace(string(output)))
-
 				})
 			})
 		}

@@ -17,9 +17,7 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
-var (
-	upgrader = websocket.Upgrader{}
-)
+var upgrader = websocket.Upgrader{}
 
 func wsHandler(t *testing.T, recvBuffer *bytes.Buffer) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {

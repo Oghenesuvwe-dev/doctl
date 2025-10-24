@@ -38,7 +38,6 @@ func TestImageActionsGet(t *testing.T) {
 		err := RunImageActionsGet(config)
 		assert.NoError(t, err)
 	})
-
 }
 
 func TestImageActionsTransfer(t *testing.T) {
