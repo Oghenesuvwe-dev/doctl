@@ -47,14 +47,9 @@ func (e *VPCNATGateways) ColMap() map[string]string {
 func (e *VPCNATGateways) KV() []map[string]any {
 	out := make([]map[string]any, 0, len(e.VPCNATGateways))
 	for _, gateway := range e.VPCNATGateways {
-		for id, vpc := range gateway.VPCs {
-			var (
-				rowGw  godo.VPCNATGateway
-				rowMap = make(map[string]any)
-			)
-			if id == 0 {
-				rowGw = *gateway
-			}
+		for _, vpc := range gateway.VPCs {
+			rowGw := *gateway
+			rowMap := make(map[string]any)
 			rowMap["ID"] = rowGw.ID
 			rowMap["Name"] = rowGw.Name
 			rowMap["Type"] = rowGw.Type
